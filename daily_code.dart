@@ -86,3 +86,20 @@ void printSearch(String keyword) {
   final results = searchDays(keyword);
   print('Found ${results.length} day(s) matching "$keyword"');
 }
+
+// Day 11 - Sort days by number
+void sortDays() {
+  days.sort((a, b) => a.number.compareTo(b.number));
+  print('Days sorted by number');
+}
+
+void printLatest() {
+  sortDays();
+  print('Latest day: ${days.last.number}');
+}
+
+
+
+
+
+
