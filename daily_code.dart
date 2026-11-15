@@ -97,9 +97,3 @@ void printLatest() {
   sortDays();
   print('Latest day: ${days.last.number}');
 }
-
-
-
-
-
-
