@@ -97,3 +97,13 @@ void printLatest() {
   sortDays();
   print('Latest day: ${days.last.number}');
 }
+// Day 12 - Filter days by minimum number
+List<Day> daysFrom(int minNumber) {
+  return days.where((day) => day.number >= minNumber).toList();
+}
+
+void printDaysFrom(int minNumber) {
+  for (final day in daysFrom(minNumber)) {
+    print('Day ${day.number}: ${day.note}');
+  }
+}
