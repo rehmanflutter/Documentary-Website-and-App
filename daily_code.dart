@@ -107,3 +107,11 @@ void printDaysFrom(int minNumber) {
     print('Day ${day.number}: ${day.note}');
   }
 }
+// Day 13 - Check if a day exists
+bool hasDay(int number) {
+  return days.any((day) => day.number == number);
+}
+
+void printHasDay(int number) {
+  print('Day $number exists: ${hasDay(number)}');
+}
