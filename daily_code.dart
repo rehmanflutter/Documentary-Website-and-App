@@ -115,3 +115,13 @@ bool hasDay(int number) {
 void printHasDay(int number) {
   print('Day $number exists: ${hasDay(number)}');
 }
+
+// Day 14 - Get a day's note by number
+String? getDayNote(int number) {
+  final day = findDay(number);
+  return day?.note;
+}
+
+void printDayNote(int number) {
+  print('Day $number note: ${getDayNote(number) ?? 'not found'}');
+}
