@@ -125,3 +125,12 @@ String? getDayNote(int number) {
 void printDayNote(int number) {
   print('Day $number note: ${getDayNote(number) ?? 'not found'}');
 }
+
+// Day 15 - List all day numbers
+List<int> allDayNumbers() {
+  return days.map((day) => day.number).toList();
+}
+
+void printDayNumbers() {
+  print('Day numbers: ${allDayNumbers().join(', ')}');
+}
