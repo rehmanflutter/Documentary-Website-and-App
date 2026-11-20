@@ -134,3 +134,14 @@ List<int> allDayNumbers() {
 void printDayNumbers() {
   print('Day numbers: ${allDayNumbers().join(', ')}');
 }
+
+// Day 16 - Get the latest logged day
+Day? lastDay() {
+  if (days.isEmpty) return null;
+  sortDays();
+  return days.last;
+}
+
+void printLastDay() {
+  print('Latest day: ${lastDay()?.number ?? 'none'}');
+}
