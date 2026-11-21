@@ -145,3 +145,13 @@ Day? lastDay() {
 void printLastDay() {
   print('Latest day: ${lastDay()?.number ?? 'none'}');
 }
+// Day 17 - Get the earliest logged day
+Day? firstDay() {
+  if (days.isEmpty) return null;
+  sortDays();
+  return days.first;
+}
+
+void printFirstDay() {
+  print('First day: ${firstDay()?.number ?? 'none'}');
+}
