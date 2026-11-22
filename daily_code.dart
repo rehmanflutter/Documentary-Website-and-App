@@ -155,3 +155,11 @@ Day? firstDay() {
 void printFirstDay() {
   print('First day: ${firstDay()?.number ?? 'none'}');
 }
+// Day 18 - Count days matching a keyword
+int countMatching(String keyword) {
+    return searchDays(keyword).length;
+}
+
+void printCountMatching(String keyword) {
+    print('Days matching "$keyword": ${countMatching(keyword)}');
+}
