@@ -78,3 +78,18 @@ Is file mein Documentary Website and App (story-video-maker) ki rozana nayi feat
 - Code summary: Naya server action addCustomScene — user ki narration line se project ki style bible aur picture-match rule ke mutabiq matching English image prompt banata hai, scene ko sahi position par insert karta hai (baad wali scenes ki positions shift karke). Client mein Studio mein "Apni scene add karein" section (Publish Kit ke baad): narration textarea, jagah ka select (end ya kisi scene ke baad), khaali line par error; add par stage nayi scene par jata hai aur makeImage se tasveer banti hai; auto-editor loop se race rokne ke liye nayi scene autoTried mein daal di jati hai. Koi schema/migration change nahi. Purani features untouched.
 
 - Verify hua: sandbox test project (4 scenes) par addCustomScene se ek scene Scene 2 ke baad position 3 par insert hui, purani scenes 3→4, 4→5 shift huin, aur image prompt narration se match karta tha; dusri custom scene end par position 6 par judi; generateSceneImage custom scene par chala (image URL mila); moveScene down custom scene par chala; duplicateProject ne copy mein 6 scenes (custom scenes aur bani hui tasveer samet) copy kiye; build/audit pass.
+
+---
+
+## 2026-11-23: Tasveer Dobara Banao (Regenerate Scene Image)
+
+- Studio/editor mein har us scene ke liye jiski tasveer pehle se bani hui hai, "Tasveer dobara banao" button — scene list aur editor timeline dono jagah.
+- Dabane par server wahi narration aur project ki style bible se nayi variation banata hai: har dafa 8 mukhtalif camera angles mein se ek random angle/composition ke saath, taake nayi tasveer purani se waazeh tor par mukhtalif ho.
+- Banate waqt "Nayi tasveer ban rahi hai…" dikhta hai aur purani tasveer tab tak dikhti rehti hai jab tak nayi na aa jaye; fail ho to purani tasveer wahi rehti hai aur dobara koshish ho sakti hai.
+- Nayi tasveer server par purani ki jagah save hoti hai — reload ke baad bhi player, timeline, .webm export aur project duplicate mein nayi tasveer aati hai. Jinki tasveer abhi bani nahi, unke liye "Tasveer banao" button waisa hi hai.
+- Code summary: `generatesceneimage` action mein `force` option — nayi variation ke liye 8 angles mein se random angle seed; client mein alag `regenBusy` state jo purani imageUrl ko refetch tak barqarar rakhti hai; scene list, timeline aur stage par regenerate button aur status.
+
+
+
+
+
