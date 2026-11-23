@@ -163,3 +163,13 @@ int countMatching(String keyword) {
 void printCountMatching(String keyword) {
     print('Days matching "$keyword": ${countMatching(keyword)}');
 }
+// Day 19 - List all day notes
+List<String> allDayNotes() {
+  return days.map((day) => day.note).toList();
+}
+
+void printDayNotes() {
+  for (final note in allDayNotes()) {
+    print('- $note');
+  }
+}
