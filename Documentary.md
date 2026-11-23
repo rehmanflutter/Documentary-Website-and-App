@@ -88,6 +88,3 @@ Is file mein Documentary Website and App (story-video-maker) ki rozana nayi feat
 - Banate waqt "Nayi tasveer ban rahi hai…" dikhta hai aur purani tasveer tab tak dikhti rehti hai jab tak nayi na aa jaye; fail ho to purani tasveer wahi rehti hai aur dobara koshish ho sakti hai.
 - Nayi tasveer server par purani ki jagah save hoti hai — reload ke baad bhi player, timeline, .webm export aur project duplicate mein nayi tasveer aati hai. Jinki tasveer abhi bani nahi, unke liye "Tasveer banao" button waisa hi hai.
 - Code summary: `generatesceneimage` action mein `force` option — nayi variation ke liye 8 angles mein se random angle seed; client mein alag `regenBusy` state jo purani imageUrl ko refetch tak barqarar rakhti hai; scene list, timeline aur stage par regenerate button aur status.
-
-
-
