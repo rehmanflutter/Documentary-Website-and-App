@@ -173,3 +173,13 @@ void printDayNotes() {
     print('- $note');
   }
 }
+// Day 20 - Summary of all days
+String daySummary() {
+    return days
+            .map((day) => 'Day ${day.number}: ${day.note}')
+            .join(' | ');
+}
+
+void printDaySummary() {
+    print('Summary: ${daySummary()}');
+}
