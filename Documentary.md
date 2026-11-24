@@ -88,3 +88,16 @@ Is file mein Documentary Website and App (story-video-maker) ki rozana nayi feat
 - Banate waqt "Nayi tasveer ban rahi hai…" dikhta hai aur purani tasveer tab tak dikhti rehti hai jab tak nayi na aa jaye; fail ho to purani tasveer wahi rehti hai aur dobara koshish ho sakti hai.
 - Nayi tasveer server par purani ki jagah save hoti hai — reload ke baad bhi player, timeline, .webm export aur project duplicate mein nayi tasveer aati hai. Jinki tasveer abhi bani nahi, unke liye "Tasveer banao" button waisa hi hai.
 - Code summary: `generatesceneimage` action mein `force` option — nayi variation ke liye 8 angles mein se random angle seed; client mein alag `regenBusy` state jo purani imageUrl ko refetch tak barqarar rakhti hai; scene list, timeline aur stage par regenerate button aur status.
+
+## 24 November 2026 — Scene ki Narration Badlo (Edit Scene Narration)
+- Studio/editor mein har scene ke saath "Narration badlo" button (scene list aur editor timeline dono jagah); timeline se dabane par editor usi scene par khul kar scroll ho jata hai.
+- Dabane par us scene ki narration line editable textarea mein khulti hai — Save/Cancel; khaali line save nahi hoti.
+- Save karne par nayi line server par save hoti hai (reload ke baad bhi rehti hai) aur player, stage, subtitles, .srt aur .webm export — sab mein nayi line aati hai; scene ki jagah/order aur baaki scenes bilkul waisi hi rehti hain.
+- Jis scene ki tasveer pehle se bani hui hai, save ke baad poochha jata hai "Tasveer bhi nayi line ke mutabiq dobara banao?" — Haan par tasveer nayi line ke mutabiq dobara banti hai, Na par purani tasveer rehti hai; bina-tasveer scene par ye sawal nahi aata.
+- Code: server par maujood updateSceneNarration action ko UI se jora gaya (scene list + editor timeline); scene list mein pehle se maujood basic "Line edit karein" editor ko poori feature mein badla gaya; regen prompt sirf tab aata hai jab line badli ho aur scene ki tasveer maujood ho, aur "Haan" maujooda generateSceneImage (force=true) se tasveer dobara banata hai.
+
+
+
+
+
+
