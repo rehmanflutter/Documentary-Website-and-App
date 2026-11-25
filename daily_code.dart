@@ -193,11 +193,3 @@ void printDaysCleared() {
   clearDays();
   print('Days remaining: ${days.length}');
 }
-
-
-
-
-
-
-
-
