@@ -96,8 +96,11 @@ Is file mein Documentary Website and App (story-video-maker) ki rozana nayi feat
 - Jis scene ki tasveer pehle se bani hui hai, save ke baad poochha jata hai "Tasveer bhi nayi line ke mutabiq dobara banao?" — Haan par tasveer nayi line ke mutabiq dobara banti hai, Na par purani tasveer rehti hai; bina-tasveer scene par ye sawal nahi aata.
 - Code: server par maujood updateSceneNarration action ko UI se jora gaya (scene list + editor timeline); scene list mein pehle se maujood basic "Line edit karein" editor ko poori feature mein badla gaya; regen prompt sirf tab aata hai jab line badli ho aur scene ki tasveer maujood ho, aur "Haan" maujooda generateSceneImage (force=true) se tasveer dobara banata hai.
 
-
-
+## 25 November 2026 — Video ka Naam Badlo (Rename Project)
+- "Meri videos" list ke har card mein "Naam badlo" button aur Studio mein title ke saath waisa hi editor — title inline edit hota hai (Save/Cancel; khaali naam save nahi hota).
+- Naya naam server par save hota hai: reload ke baad bhi list, Studio, player/title card aur search mein naya naam dikhta hai; project duplicate karne par copy ko naya naam milta hai.
+- Sirf title badalta hai — scenes, tasveerein, narration, poster, background music, subtitle style aur YouTube publish kit bilkul waisi hi rehti hain.
+- Code summary: naya server action `renameProject` (title trim + min 1 validation, sirf title update karta hai); client mein list card aur Studio dono jagah inline rename editor; save par project detail refetch aur projects list invalidate hoti hai taake har jagah naya naam dikhe.
 
 
 
