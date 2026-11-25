@@ -183,3 +183,21 @@ String daySummary() {
 void printDaySummary() {
     print('Summary: ${daySummary()}');
 }
+// Day 21 - Clear all logged days
+void clearDays() {
+  days.clear();
+  print('All days cleared');
+}
+
+void printDaysCleared() {
+  clearDays();
+  print('Days remaining: ${days.length}');
+}
+
+
+
+
+
+
+
+
