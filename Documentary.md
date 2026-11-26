@@ -104,3 +104,9 @@ Is file mein Documentary Website and App (story-video-maker) ki rozana nayi feat
 
 
 
+
+## 2026-11-26 — Video ki Script Download karein
+- Studio mein YouTube Publish Kit ke neeche naya "Script" section: project ka title aur topic upar, phir har scene ki narration line "Scene 1, Scene 2, ..." number ke saath, scenes ke maujooda order mein.
+- "Script download karein (.txt)" button: dabane par asal .txt file download hoti hai jisme title, topic aur saari numbered narration lines hoti hain.
+- Script koi alag stored copy nahi — Studio ke live scenes data se banti hai, is liye narration badalne, scene add/delete ya reorder karne ke baad script aur download dono mein wahi nayi haalat dikhti hai.
+- Code summary: client-side hi hai — App.tsx mein naya ScriptSection component (PublishKit ke baad render hota hai, getProject detail query ke live scenes istemal karta hai); download pehle se tested downloadText/downloadBlob helper (Blob + anchor click) se hoti hai, wahi jo Publish Kit ki .txt download istemal karti hai. Koi naya server action, schema ya migration nahi; baaki features untouched.
