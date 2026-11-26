@@ -193,3 +193,13 @@ void printDaysCleared() {
   clearDays();
   print('Days remaining: ${days.length}');
 }
+// Day 22 - Remove the latest logged day
+void removeLastDay() {
+  sortDays();
+  print('Removed latest day: ${days.removeLast().number}');
+}
+
+void printRemoveLast() {
+    removeLastDay();
+  print('Days remaining: ${days.length}');
+}
