@@ -110,3 +110,13 @@ Is file mein Documentary Website and App (story-video-maker) ki rozana nayi feat
 - "Script download karein (.txt)" button: dabane par asal .txt file download hoti hai jisme title, topic aur saari numbered narration lines hoti hain.
 - Script koi alag stored copy nahi — Studio ke live scenes data se banti hai, is liye narration badalne, scene add/delete ya reorder karne ke baad script aur download dono mein wahi nayi haalat dikhti hai.
 - Code summary: client-side hi hai — App.tsx mein naya ScriptSection component (PublishKit ke baad render hota hai, getProject detail query ke live scenes istemal karta hai); download pehle se tested downloadText/downloadBlob helper (Blob + anchor click) se hoti hai, wahi jo Publish Kit ki .txt download istemal karti hai. Koi naya server action, schema ya migration nahi; baaki features untouched.
+
+
+
+
+## 2026-11-27 — Narration Speed Control (0.75x / 1x / 1.25x)
+- Player mein "Awaz ki speed" dropdown mein teen standard presets add hue: 0.75x (Aahista), 1x (Normal), 1.25x (Tez).
+- Maujooda options (0.9 Slow, 0.98 Normal, 1.08 Tez) barkarar hain; dropdown mein ab 6 options ascending order mein hain.
+- Chuni hui speed har narration utterance par lagu hoti hai (SpeechSynthesisUtterance.rate) aur localStorage "svm-voice-rate" mein save rehti hai; reload validation range 0.75–1.25 tak badha di gayi taake naye presets video dobara kholne par bane rahein.
+- Code summary: client-side change in client/src/App.tsx only — voice-rate select options extended, chooseRate persistence unchanged, no server action, schema ya migration nahi; baaki features untouched.
+  
