@@ -203,3 +203,18 @@ void printRemoveLast() {
     removeLastDay();
   print('Days remaining: ${days.length}');
 }
+
+// Day 23 - Find the longest day note
+String longestNote() {
+  return days.fold('', (longest, day) =>
+      day.note.length > longest.length ? day.note : longest);
+}
+
+void printLongestNote() {
+  print('Longest note: ${longestNote()}');
+}
+
+
+
+
+
