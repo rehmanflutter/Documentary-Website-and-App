@@ -213,3 +213,14 @@ String longestNote() {
 void printLongestNote() {
   print('Longest note: ${longestNote()}');
 }
+
+// Day 24 - Find the shortest day note
+String shortestNote() {
+  if (days.isEmpty) return '';
+  return days.fold(days.first.note, (shortest, day) =>
+      day.note.length < shortest.length ? day.note : shortest);
+}
+
+void printShortestNote() {
+  print('Shortest note: ${shortestNote()}');
+}
