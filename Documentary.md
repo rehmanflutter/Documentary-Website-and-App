@@ -120,3 +120,12 @@ Is file mein Documentary Website and App (story-video-maker) ki rozana nayi feat
 - Chuni hui speed har narration utterance par lagu hoti hai (SpeechSynthesisUtterance.rate) aur localStorage "svm-voice-rate" mein save rehti hai; reload validation range 0.75–1.25 tak badha di gayi taake naye presets video dobara kholne par bane rahein.
 - Code summary: client-side change in client/src/App.tsx only — voice-rate select options extended, chooseRate persistence unchanged, no server action, schema ya migration nahi; baaki features untouched.
   
+
+
+## 2026-11-28 — Scene ki Copy Banao (Duplicate Scene)
+
+- Feature: Studio/editor mein har scene ke saath "Copy banao" button (scene list aur editor timeline dono jagah). Dabate hi us scene ki poori copy usi ke foran baad lag jati hai — wohi narration, wohi image prompt aur wohi bani hui tasveer. Baaki scenes ki tartib waisi hi rehti hai, aur stage nayi copy par chala jata hai.
+- Copy bilkul alag scene hai: uski narration ya tasveer badalne se original par koi farq nahi padta; copy par Upar/Neeche reorder, narration badlo, tasveer dobara banao aur delete bhi aam scene ki tarah chalte hain.
+- Player, timeline aur .webm/.srt export sab copy ko uski jagah par dikhate/chalate hain, kyunke sab scenes ko position ke hisaab se padhte hain.
+- Code summary: Naya server action `duplicateScene` — scene ki copy nayi id ke saath banata hai (narration, image prompt, image blob URL aur "tasveer na banao" choice samet), copy ko original ke foran baad insert karta hai aur baad wali scenes ki positions shift karta hai. Client mein scene list aur editor timeline dono mein "Copy banao" button; copy banne par stage nayi copy par jata hai. Koi schema/migration change nahi. Purani features untouched.
+- Verify hua: sandbox test mein scene (position 2, tasveer samet) duplicate ki — copy position 3 par wohi narration/image prompt/image ke saath aayi, baad wali scenes 3→4, 4→5 shift huin; copy ki narration badalne par original unchanged raha; build/audit pass.
